@@ -1,0 +1,48 @@
+<div>
+    <header>
+        <app-header></app-header>
+    </header>
+    <main>
+       
+
+                <p>
+                <span id="box" *ngFor="let block of gs.blocks ; let i = index;" (click)="playerClick(i)">
+                    <i [class]="block.symbol == 'done' ? 'material-icons tick' : 'material-icons cross'">{{ block.symbol }}</i>
+                </span>
+                </p>
+                <!-- <span>I wanted to use the appscore table component but i didnt find a way to use it </span> -->
+                <table>
+                    <tr>
+                        <td>
+                            <label>Player Score</label>
+                            <input type="text" [(ngModel)]=playerScore readonly >
+                        </td>
+                    <tr>
+                    <tr>
+                        <td>
+                    <label>BotScore</label>
+                    <input type="text" [(ngModel)]=botScore readonly >
+            
+                        </td>
+                    </tr>
+                    <tr>
+                            <td>
+                        <label>Draw</label>
+                        <input type="text" [(ngModel)]=draw readonly>
+                            </td>
+                        </tr>
+                </table>
+                
+            
+                
+
+          
+    </main>
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+
+
+
+
+</div>
